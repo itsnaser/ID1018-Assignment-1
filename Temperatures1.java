@@ -105,7 +105,7 @@ class Temperatures1 {
 		double sumTemp = sumT[1];
 		double avgTemp = 0;
 		// add code here
-		for (int week = 1; week <= nofWeeks; week++) {
+		for (int week = 2; week <= nofWeeks; week++) {
 			minT[week] = t[week][1];
 			maxT[week] = t[week][1];
 			for (int meas = 1; meas <= nofMeasurementsPerWeek; meas++) {
@@ -118,7 +118,7 @@ class Temperatures1 {
 				sumTemp += t[week][meas];
 			}
 		}
-		avgTemp = (sumTemp - sumT[1]) / (nofMeasurementsPerWeek * nofWeeks);
+		avgTemp = sumTemp / (nofMeasurementsPerWeek * nofWeeks);
 
 		// show the least, greatest and average temperature for
 		// the whole period
